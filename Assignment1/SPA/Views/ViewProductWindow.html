@@ -1,0 +1,27 @@
+﻿<form name="formCreate">
+    <div class="form-group">
+        <label for="CreateUser">Create a User</label>
+    </div>
+    <div class="form-group">
+        
+        <label for="FirstNameInput">First Name</label>
+        <input type="text" class="form-control" ng-model="FirstName" required name="FirstNameInput" placeholder="First Name">
+    <span class="error" ng-show="form.FirstNameInput.$error.required">Required Field</span>
+        <label for="LastNameInput">Last Name</label>
+        <input type="text" class="form-control" ng-model="LastName" required name="LastNameInput" placeholder="Last Name">
+       
+        <label for="UserNameInput">User Name</label>
+    <span class="error" ng-show="form.LastNameInput.$error.required">Required Field</span>
+        <span class="error" ng-show="showUserNameError">Duplicate Primary Key</span>
+        <input type="text" class="form-control" ng-model="UserName" required name="UserNameInput" placeholder="User Name">
+    <span class="error" ng-show="form.UserNameInput.$error.required">Required Field</span>
+        <label for="emailInput">Email</label>
+        <input type="email" class="form-control" ng-model="Email" required name="EmailInput" aria-describedby="emailHelp" placeholder="Enter email">
+    <span class="error" ng-show="form.EmailInput.$error.email">Wrong Format</span>
+        <span class="error" ng-show="form.EmailInput.$error.required">Required Field</span>
+        <button type="button" id="cancel" ng-click="closeModal()" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary" ng-click="submit()">Submit</button>
+    </div>
+    
+</form>
+

@@ -1,0 +1,22 @@
+﻿<div class="container-fluid table-responsive">
+    <hr />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th width="40%">Name</th>
+                <th width="40%">Email</th>
+                <th width="20%">Joined</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in data.peopledata.data">
+                <td>{{x.FullName}} <br />{{x.UserName}}</td>
+                <td>{{x.Email}}</td>
+                <td>{{x.Joined}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<uib-pagination total-items="data.peopledata.totalitems" max-size="8" ng-model="data.peopledata.currentPage" ng-change="pageChanged()"></uib-pagination>
